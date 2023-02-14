@@ -1,0 +1,1248 @@
+{
+    "provider_name": "terraform-provider-tfe",
+    "resources": [
+        {
+            "resource_name": "tfe_notification_configuration",
+            "description": "",
+            "columns": [
+                {
+                    "column_name": "email_addresses",
+                    "column_type": 11,
+                    "description": ""
+                },
+                {
+                    "column_name": "email_user_ids",
+                    "column_type": 11,
+                    "description": ""
+                },
+                {
+                    "column_name": "enabled",
+                    "column_type": 6,
+                    "description": ""
+                },
+                {
+                    "column_name": "name",
+                    "column_type": 7,
+                    "description": ""
+                },
+                {
+                    "column_name": "token",
+                    "column_type": 7,
+                    "description": ""
+                },
+                {
+                    "column_name": "triggers",
+                    "column_type": 11,
+                    "description": ""
+                },
+                {
+                    "column_name": "url",
+                    "column_type": 7,
+                    "description": ""
+                },
+                {
+                    "column_name": "destination_type",
+                    "column_type": 7,
+                    "description": ""
+                },
+                {
+                    "column_name": "workspace_id",
+                    "column_type": 7,
+                    "description": ""
+                },
+                {
+                    "column_name": "id",
+                    "column_type": 7,
+                    "description": ""
+                }
+            ]
+        },
+        {
+            "resource_name": "tfe_terraform_version",
+            "description": "",
+            "columns": [
+                {
+                    "column_name": "sha",
+                    "column_type": 7,
+                    "description": ""
+                },
+                {
+                    "column_name": "version",
+                    "column_type": 7,
+                    "description": ""
+                },
+                {
+                    "column_name": "beta",
+                    "column_type": 6,
+                    "description": ""
+                },
+                {
+                    "column_name": "official",
+                    "column_type": 6,
+                    "description": ""
+                },
+                {
+                    "column_name": "enabled",
+                    "column_type": 6,
+                    "description": ""
+                },
+                {
+                    "column_name": "id",
+                    "column_type": 7,
+                    "description": ""
+                },
+                {
+                    "column_name": "url",
+                    "column_type": 7,
+                    "description": ""
+                },
+                {
+                    "column_name": "deprecated",
+                    "column_type": 6,
+                    "description": ""
+                },
+                {
+                    "column_name": "deprecated_reason",
+                    "column_type": 7,
+                    "description": ""
+                }
+            ]
+        },
+        {
+            "resource_name": "tfe_admin_organization_settings",
+            "description": "",
+            "columns": [
+                {
+                    "column_name": "access_beta_tools",
+                    "column_type": 6,
+                    "description": ""
+                },
+                {
+                    "column_name": "global_module_sharing",
+                    "column_type": 6,
+                    "description": ""
+                },
+                {
+                    "column_name": "id",
+                    "column_type": 7,
+                    "description": ""
+                },
+                {
+                    "column_name": "module_sharing_consumer_organizations",
+                    "column_type": 11,
+                    "description": ""
+                },
+                {
+                    "column_name": "organization",
+                    "column_type": 7,
+                    "description": ""
+                },
+                {
+                    "column_name": "sso_enabled",
+                    "column_type": 6,
+                    "description": ""
+                },
+                {
+                    "column_name": "workspace_limit",
+                    "column_type": 5,
+                    "description": ""
+                }
+            ]
+        },
+        {
+            "resource_name": "tfe_workspace_variable_set",
+            "description": "",
+            "columns": [
+                {
+                    "column_name": "workspace_id",
+                    "column_type": 7,
+                    "description": ""
+                },
+                {
+                    "column_name": "id",
+                    "column_type": 7,
+                    "description": ""
+                },
+                {
+                    "column_name": "variable_set_id",
+                    "column_type": 7,
+                    "description": ""
+                }
+            ]
+        },
+        {
+            "resource_name": "tfe_team_members",
+            "description": "",
+            "columns": [
+                {
+                    "column_name": "id",
+                    "column_type": 7,
+                    "description": ""
+                },
+                {
+                    "column_name": "team_id",
+                    "column_type": 7,
+                    "description": ""
+                },
+                {
+                    "column_name": "usernames",
+                    "column_type": 11,
+                    "description": ""
+                }
+            ]
+        },
+        {
+            "resource_name": "tfe_team",
+            "description": "",
+            "columns": [
+                {
+                    "column_name": "organization",
+                    "column_type": 7,
+                    "description": ""
+                },
+                {
+                    "column_name": "sso_team_id",
+                    "column_type": 7,
+                    "description": ""
+                },
+                {
+                    "column_name": "visibility",
+                    "column_type": 7,
+                    "description": ""
+                },
+                {
+                    "column_name": "organization_access",
+                    "column_type": 11,
+                    "description": ""
+                },
+                {
+                    "column_name": "id",
+                    "column_type": 7,
+                    "description": ""
+                },
+                {
+                    "column_name": "name",
+                    "column_type": 7,
+                    "description": ""
+                }
+            ]
+        },
+        {
+            "resource_name": "tfe_team_access",
+            "description": "",
+            "columns": [
+                {
+                    "column_name": "team_id",
+                    "column_type": 7,
+                    "description": ""
+                },
+                {
+                    "column_name": "workspace_id",
+                    "column_type": 7,
+                    "description": ""
+                },
+                {
+                    "column_name": "permissions",
+                    "column_type": 11,
+                    "description": ""
+                },
+                {
+                    "column_name": "access",
+                    "column_type": 7,
+                    "description": ""
+                },
+                {
+                    "column_name": "id",
+                    "column_type": 7,
+                    "description": ""
+                }
+            ]
+        },
+        {
+            "resource_name": "tfe_organization_module_sharing",
+            "description": "",
+            "columns": [
+                {
+                    "column_name": "id",
+                    "column_type": 7,
+                    "description": ""
+                },
+                {
+                    "column_name": "module_consumers",
+                    "column_type": 11,
+                    "description": ""
+                },
+                {
+                    "column_name": "organization",
+                    "column_type": 7,
+                    "description": ""
+                }
+            ]
+        },
+        {
+            "resource_name": "tfe_registry_module",
+            "description": "",
+            "columns": [
+                {
+                    "column_name": "name",
+                    "column_type": 7,
+                    "description": ""
+                },
+                {
+                    "column_name": "namespace",
+                    "column_type": 7,
+                    "description": ""
+                },
+                {
+                    "column_name": "no_code",
+                    "column_type": 6,
+                    "description": ""
+                },
+                {
+                    "column_name": "organization",
+                    "column_type": 7,
+                    "description": ""
+                },
+                {
+                    "column_name": "registry_name",
+                    "column_type": 7,
+                    "description": ""
+                },
+                {
+                    "column_name": "vcs_repo",
+                    "column_type": 11,
+                    "description": ""
+                },
+                {
+                    "column_name": "id",
+                    "column_type": 7,
+                    "description": ""
+                },
+                {
+                    "column_name": "module_provider",
+                    "column_type": 7,
+                    "description": ""
+                }
+            ]
+        },
+        {
+            "resource_name": "tfe_sentinel_policy",
+            "description": "",
+            "columns": [
+                {
+                    "column_name": "description",
+                    "column_type": 7,
+                    "description": ""
+                },
+                {
+                    "column_name": "enforce_mode",
+                    "column_type": 7,
+                    "description": ""
+                },
+                {
+                    "column_name": "id",
+                    "column_type": 7,
+                    "description": ""
+                },
+                {
+                    "column_name": "name",
+                    "column_type": 7,
+                    "description": ""
+                },
+                {
+                    "column_name": "organization",
+                    "column_type": 7,
+                    "description": ""
+                },
+                {
+                    "column_name": "policy",
+                    "column_type": 7,
+                    "description": ""
+                }
+            ]
+        },
+        {
+            "resource_name": "tfe_organization",
+            "description": "",
+            "columns": [
+                {
+                    "column_name": "session_timeout_minutes",
+                    "column_type": 5,
+                    "description": ""
+                },
+                {
+                    "column_name": "allow_force_delete_workspaces",
+                    "column_type": 6,
+                    "description": ""
+                },
+                {
+                    "column_name": "assessments_enforced",
+                    "column_type": 6,
+                    "description": ""
+                },
+                {
+                    "column_name": "email",
+                    "column_type": 7,
+                    "description": ""
+                },
+                {
+                    "column_name": "name",
+                    "column_type": 7,
+                    "description": ""
+                },
+                {
+                    "column_name": "owners_team_saml_role_id",
+                    "column_type": 7,
+                    "description": ""
+                },
+                {
+                    "column_name": "session_remember_minutes",
+                    "column_type": 5,
+                    "description": ""
+                },
+                {
+                    "column_name": "collaborator_auth_policy",
+                    "column_type": 7,
+                    "description": ""
+                },
+                {
+                    "column_name": "cost_estimation_enabled",
+                    "column_type": 6,
+                    "description": ""
+                },
+                {
+                    "column_name": "default_project_id",
+                    "column_type": 7,
+                    "description": ""
+                },
+                {
+                    "column_name": "id",
+                    "column_type": 7,
+                    "description": ""
+                },
+                {
+                    "column_name": "send_passing_statuses_for_untriggered_speculative_plans",
+                    "column_type": 6,
+                    "description": ""
+                }
+            ]
+        },
+        {
+            "resource_name": "tfe_project",
+            "description": "",
+            "columns": [
+                {
+                    "column_name": "id",
+                    "column_type": 7,
+                    "description": ""
+                },
+                {
+                    "column_name": "name",
+                    "column_type": 7,
+                    "description": ""
+                },
+                {
+                    "column_name": "organization",
+                    "column_type": 7,
+                    "description": ""
+                }
+            ]
+        },
+        {
+            "resource_name": "tfe_ssh_key",
+            "description": "",
+            "columns": [
+                {
+                    "column_name": "organization",
+                    "column_type": 7,
+                    "description": ""
+                },
+                {
+                    "column_name": "id",
+                    "column_type": 7,
+                    "description": ""
+                },
+                {
+                    "column_name": "key",
+                    "column_type": 7,
+                    "description": ""
+                },
+                {
+                    "column_name": "name",
+                    "column_type": 7,
+                    "description": ""
+                }
+            ]
+        },
+        {
+            "resource_name": "tfe_organization_membership",
+            "description": "",
+            "columns": [
+                {
+                    "column_name": "user_id",
+                    "column_type": 7,
+                    "description": ""
+                },
+                {
+                    "column_name": "username",
+                    "column_type": 7,
+                    "description": ""
+                },
+                {
+                    "column_name": "email",
+                    "column_type": 7,
+                    "description": ""
+                },
+                {
+                    "column_name": "id",
+                    "column_type": 7,
+                    "description": ""
+                },
+                {
+                    "column_name": "organization",
+                    "column_type": 7,
+                    "description": ""
+                }
+            ]
+        },
+        {
+            "resource_name": "tfe_organization_run_task",
+            "description": "",
+            "columns": [
+                {
+                    "column_name": "id",
+                    "column_type": 7,
+                    "description": ""
+                },
+                {
+                    "column_name": "name",
+                    "column_type": 7,
+                    "description": ""
+                },
+                {
+                    "column_name": "organization",
+                    "column_type": 7,
+                    "description": ""
+                },
+                {
+                    "column_name": "url",
+                    "column_type": 7,
+                    "description": ""
+                },
+                {
+                    "column_name": "category",
+                    "column_type": 7,
+                    "description": ""
+                },
+                {
+                    "column_name": "description",
+                    "column_type": 7,
+                    "description": ""
+                },
+                {
+                    "column_name": "enabled",
+                    "column_type": 6,
+                    "description": ""
+                },
+                {
+                    "column_name": "hmac_key",
+                    "column_type": 7,
+                    "description": ""
+                }
+            ]
+        },
+        {
+            "resource_name": "tfe_agent_pool",
+            "description": "",
+            "columns": [
+                {
+                    "column_name": "name",
+                    "column_type": 7,
+                    "description": ""
+                },
+                {
+                    "column_name": "organization",
+                    "column_type": 7,
+                    "description": ""
+                },
+                {
+                    "column_name": "id",
+                    "column_type": 7,
+                    "description": ""
+                }
+            ]
+        },
+        {
+            "resource_name": "tfe_policy",
+            "description": "",
+            "columns": [
+                {
+                    "column_name": "description",
+                    "column_type": 7,
+                    "description": "Text describing the policy's purpose"
+                },
+                {
+                    "column_name": "enforce_mode",
+                    "column_type": 7,
+                    "description": "The enforcement configuration of the policy. For Sentinel, valid values are `hard-mandatory`, `soft-mandatory` and `advisory`. For OPA, Valid values are ``mandatory` and `advisory``"
+                },
+                {
+                    "column_name": "id",
+                    "column_type": 7,
+                    "description": ""
+                },
+                {
+                    "column_name": "kind",
+                    "column_type": 7,
+                    "description": "The policy-as-code framework for the policy. Valid values are sentinel and opa"
+                },
+                {
+                    "column_name": "name",
+                    "column_type": 7,
+                    "description": "The name of the policy"
+                },
+                {
+                    "column_name": "organization",
+                    "column_type": 7,
+                    "description": "Name of the organization that this policy belongs to"
+                },
+                {
+                    "column_name": "policy",
+                    "column_type": 7,
+                    "description": "Text of a valid Sentinel or OPA policy"
+                },
+                {
+                    "column_name": "query",
+                    "column_type": 7,
+                    "description": "The OPA query to run. Required for OPA policies"
+                }
+            ]
+        },
+        {
+            "resource_name": "tfe_workspace",
+            "description": "",
+            "columns": [
+                {
+                    "column_name": "allow_destroy_plan",
+                    "column_type": 6,
+                    "description": ""
+                },
+                {
+                    "column_name": "description",
+                    "column_type": 7,
+                    "description": ""
+                },
+                {
+                    "column_name": "structured_run_output_enabled",
+                    "column_type": 6,
+                    "description": ""
+                },
+                {
+                    "column_name": "tag_names",
+                    "column_type": 11,
+                    "description": ""
+                },
+                {
+                    "column_name": "trigger_prefixes",
+                    "column_type": 11,
+                    "description": ""
+                },
+                {
+                    "column_name": "vcs_repo",
+                    "column_type": 11,
+                    "description": ""
+                },
+                {
+                    "column_name": "auto_apply",
+                    "column_type": 6,
+                    "description": ""
+                },
+                {
+                    "column_name": "execution_mode",
+                    "column_type": 7,
+                    "description": ""
+                },
+                {
+                    "column_name": "global_remote_state",
+                    "column_type": 6,
+                    "description": ""
+                },
+                {
+                    "column_name": "name",
+                    "column_type": 7,
+                    "description": ""
+                },
+                {
+                    "column_name": "organization",
+                    "column_type": 7,
+                    "description": ""
+                },
+                {
+                    "column_name": "speculative_enabled",
+                    "column_type": 6,
+                    "description": ""
+                },
+                {
+                    "column_name": "ssh_key_id",
+                    "column_type": 7,
+                    "description": ""
+                },
+                {
+                    "column_name": "file_triggers_enabled",
+                    "column_type": 6,
+                    "description": ""
+                },
+                {
+                    "column_name": "remote_state_consumer_ids",
+                    "column_type": 11,
+                    "description": ""
+                },
+                {
+                    "column_name": "working_directory",
+                    "column_type": 7,
+                    "description": ""
+                },
+                {
+                    "column_name": "agent_pool_id",
+                    "column_type": 7,
+                    "description": ""
+                },
+                {
+                    "column_name": "assessments_enabled",
+                    "column_type": 6,
+                    "description": ""
+                },
+                {
+                    "column_name": "force_delete",
+                    "column_type": 6,
+                    "description": ""
+                },
+                {
+                    "column_name": "id",
+                    "column_type": 7,
+                    "description": ""
+                },
+                {
+                    "column_name": "operations",
+                    "column_type": 6,
+                    "description": ""
+                },
+                {
+                    "column_name": "project_id",
+                    "column_type": 7,
+                    "description": ""
+                },
+                {
+                    "column_name": "queue_all_runs",
+                    "column_type": 6,
+                    "description": ""
+                },
+                {
+                    "column_name": "resource_count",
+                    "column_type": 5,
+                    "description": ""
+                },
+                {
+                    "column_name": "terraform_version",
+                    "column_type": 7,
+                    "description": ""
+                },
+                {
+                    "column_name": "trigger_patterns",
+                    "column_type": 11,
+                    "description": ""
+                }
+            ]
+        },
+        {
+            "resource_name": "tfe_workspace_policy_set",
+            "description": "",
+            "columns": [
+                {
+                    "column_name": "id",
+                    "column_type": 7,
+                    "description": ""
+                },
+                {
+                    "column_name": "policy_set_id",
+                    "column_type": 7,
+                    "description": ""
+                },
+                {
+                    "column_name": "workspace_id",
+                    "column_type": 7,
+                    "description": ""
+                }
+            ]
+        },
+        {
+            "resource_name": "tfe_variable_set",
+            "description": "",
+            "columns": [
+                {
+                    "column_name": "name",
+                    "column_type": 7,
+                    "description": ""
+                },
+                {
+                    "column_name": "organization",
+                    "column_type": 7,
+                    "description": ""
+                },
+                {
+                    "column_name": "workspace_ids",
+                    "column_type": 11,
+                    "description": ""
+                },
+                {
+                    "column_name": "description",
+                    "column_type": 7,
+                    "description": ""
+                },
+                {
+                    "column_name": "global",
+                    "column_type": 6,
+                    "description": ""
+                },
+                {
+                    "column_name": "id",
+                    "column_type": 7,
+                    "description": ""
+                }
+            ]
+        },
+        {
+            "resource_name": "tfe_run_trigger",
+            "description": "",
+            "columns": [
+                {
+                    "column_name": "workspace_id",
+                    "column_type": 7,
+                    "description": ""
+                },
+                {
+                    "column_name": "id",
+                    "column_type": 7,
+                    "description": ""
+                },
+                {
+                    "column_name": "sourceable_id",
+                    "column_type": 7,
+                    "description": ""
+                }
+            ]
+        },
+        {
+            "resource_name": "tfe_team_token",
+            "description": "",
+            "columns": [
+                {
+                    "column_name": "force_regenerate",
+                    "column_type": 6,
+                    "description": ""
+                },
+                {
+                    "column_name": "id",
+                    "column_type": 7,
+                    "description": ""
+                },
+                {
+                    "column_name": "team_id",
+                    "column_type": 7,
+                    "description": ""
+                },
+                {
+                    "column_name": "token",
+                    "column_type": 7,
+                    "description": ""
+                }
+            ]
+        },
+        {
+            "resource_name": "tfe_oauth_client",
+            "description": "",
+            "columns": [
+                {
+                    "column_name": "oauth_token_id",
+                    "column_type": 7,
+                    "description": ""
+                },
+                {
+                    "column_name": "private_key",
+                    "column_type": 7,
+                    "description": ""
+                },
+                {
+                    "column_name": "rsa_public_key",
+                    "column_type": 7,
+                    "description": ""
+                },
+                {
+                    "column_name": "secret",
+                    "column_type": 7,
+                    "description": ""
+                },
+                {
+                    "column_name": "service_provider",
+                    "column_type": 7,
+                    "description": ""
+                },
+                {
+                    "column_name": "api_url",
+                    "column_type": 7,
+                    "description": ""
+                },
+                {
+                    "column_name": "key",
+                    "column_type": 7,
+                    "description": ""
+                },
+                {
+                    "column_name": "name",
+                    "column_type": 7,
+                    "description": ""
+                },
+                {
+                    "column_name": "organization",
+                    "column_type": 7,
+                    "description": ""
+                },
+                {
+                    "column_name": "http_url",
+                    "column_type": 7,
+                    "description": ""
+                },
+                {
+                    "column_name": "id",
+                    "column_type": 7,
+                    "description": ""
+                },
+                {
+                    "column_name": "oauth_token",
+                    "column_type": 7,
+                    "description": ""
+                }
+            ]
+        },
+        {
+            "resource_name": "tfe_variable",
+            "description": "",
+            "columns": [
+                {
+                    "column_name": "category",
+                    "column_type": 7,
+                    "description": ""
+                },
+                {
+                    "column_name": "description",
+                    "column_type": 7,
+                    "description": ""
+                },
+                {
+                    "column_name": "value",
+                    "column_type": 7,
+                    "description": ""
+                },
+                {
+                    "column_name": "variable_set_id",
+                    "column_type": 7,
+                    "description": ""
+                },
+                {
+                    "column_name": "hcl",
+                    "column_type": 6,
+                    "description": ""
+                },
+                {
+                    "column_name": "id",
+                    "column_type": 7,
+                    "description": ""
+                },
+                {
+                    "column_name": "key",
+                    "column_type": 7,
+                    "description": ""
+                },
+                {
+                    "column_name": "sensitive",
+                    "column_type": 6,
+                    "description": ""
+                },
+                {
+                    "column_name": "workspace_id",
+                    "column_type": 7,
+                    "description": ""
+                }
+            ]
+        },
+        {
+            "resource_name": "tfe_team_organization_member",
+            "description": "",
+            "columns": [
+                {
+                    "column_name": "id",
+                    "column_type": 7,
+                    "description": ""
+                },
+                {
+                    "column_name": "organization_membership_id",
+                    "column_type": 7,
+                    "description": ""
+                },
+                {
+                    "column_name": "team_id",
+                    "column_type": 7,
+                    "description": ""
+                }
+            ]
+        },
+        {
+            "resource_name": "tfe_policy_set",
+            "description": "",
+            "columns": [
+                {
+                    "column_name": "policies_path",
+                    "column_type": 7,
+                    "description": ""
+                },
+                {
+                    "column_name": "slug",
+                    "column_type": 11,
+                    "description": ""
+                },
+                {
+                    "column_name": "description",
+                    "column_type": 7,
+                    "description": ""
+                },
+                {
+                    "column_name": "global",
+                    "column_type": 6,
+                    "description": ""
+                },
+                {
+                    "column_name": "organization",
+                    "column_type": 7,
+                    "description": ""
+                },
+                {
+                    "column_name": "overridable",
+                    "column_type": 6,
+                    "description": ""
+                },
+                {
+                    "column_name": "policy_ids",
+                    "column_type": 11,
+                    "description": ""
+                },
+                {
+                    "column_name": "workspace_ids",
+                    "column_type": 11,
+                    "description": ""
+                },
+                {
+                    "column_name": "vcs_repo",
+                    "column_type": 11,
+                    "description": ""
+                },
+                {
+                    "column_name": "id",
+                    "column_type": 7,
+                    "description": ""
+                },
+                {
+                    "column_name": "kind",
+                    "column_type": 7,
+                    "description": ""
+                },
+                {
+                    "column_name": "name",
+                    "column_type": 7,
+                    "description": ""
+                }
+            ]
+        },
+        {
+            "resource_name": "tfe_workspace_run_task",
+            "description": "",
+            "columns": [
+                {
+                    "column_name": "enforcement_level",
+                    "column_type": 7,
+                    "description": "The enforcement level of the task. Valid values are `advisory` and `mandatory`."
+                },
+                {
+                    "column_name": "id",
+                    "column_type": 7,
+                    "description": ""
+                },
+                {
+                    "column_name": "stage",
+                    "column_type": 7,
+                    "description": "The stage to run the task in. Valid values are `pre_plan`, `post_plan` and `pre_apply`."
+                },
+                {
+                    "column_name": "task_id",
+                    "column_type": 7,
+                    "description": "The id of the Run task to associate to the Workspace."
+                },
+                {
+                    "column_name": "workspace_id",
+                    "column_type": 7,
+                    "description": "The id of the workspace to associate the Run task to."
+                }
+            ]
+        },
+        {
+            "resource_name": "tfe_agent_token",
+            "description": "",
+            "columns": [
+                {
+                    "column_name": "id",
+                    "column_type": 7,
+                    "description": ""
+                },
+                {
+                    "column_name": "token",
+                    "column_type": 7,
+                    "description": ""
+                },
+                {
+                    "column_name": "agent_pool_id",
+                    "column_type": 7,
+                    "description": ""
+                },
+                {
+                    "column_name": "description",
+                    "column_type": 7,
+                    "description": ""
+                }
+            ]
+        },
+        {
+            "resource_name": "tfe_policy_set_parameter",
+            "description": "",
+            "columns": [
+                {
+                    "column_name": "sensitive",
+                    "column_type": 6,
+                    "description": ""
+                },
+                {
+                    "column_name": "value",
+                    "column_type": 7,
+                    "description": ""
+                },
+                {
+                    "column_name": "id",
+                    "column_type": 7,
+                    "description": ""
+                },
+                {
+                    "column_name": "key",
+                    "column_type": 7,
+                    "description": ""
+                },
+                {
+                    "column_name": "policy_set_id",
+                    "column_type": 7,
+                    "description": ""
+                }
+            ]
+        },
+        {
+            "resource_name": "tfe_team_project_access",
+            "description": "",
+            "columns": [
+                {
+                    "column_name": "project_id",
+                    "column_type": 7,
+                    "description": ""
+                },
+                {
+                    "column_name": "team_id",
+                    "column_type": 7,
+                    "description": ""
+                },
+                {
+                    "column_name": "access",
+                    "column_type": 7,
+                    "description": ""
+                },
+                {
+                    "column_name": "id",
+                    "column_type": 7,
+                    "description": ""
+                }
+            ]
+        },
+        {
+            "resource_name": "tfe_organization_token",
+            "description": "",
+            "columns": [
+                {
+                    "column_name": "id",
+                    "column_type": 7,
+                    "description": ""
+                },
+                {
+                    "column_name": "organization",
+                    "column_type": 7,
+                    "description": ""
+                },
+                {
+                    "column_name": "token",
+                    "column_type": 7,
+                    "description": ""
+                },
+                {
+                    "column_name": "force_regenerate",
+                    "column_type": 6,
+                    "description": ""
+                }
+            ]
+        },
+        {
+            "resource_name": "tfe_team_member",
+            "description": "",
+            "columns": [
+                {
+                    "column_name": "id",
+                    "column_type": 7,
+                    "description": ""
+                },
+                {
+                    "column_name": "team_id",
+                    "column_type": 7,
+                    "description": ""
+                },
+                {
+                    "column_name": "username",
+                    "column_type": 7,
+                    "description": ""
+                }
+            ]
+        },
+        {
+            "resource_name": "tfe_team_organization_members",
+            "description": "",
+            "columns": [
+                {
+                    "column_name": "id",
+                    "column_type": 7,
+                    "description": ""
+                },
+                {
+                    "column_name": "organization_membership_ids",
+                    "column_type": 11,
+                    "description": ""
+                },
+                {
+                    "column_name": "team_id",
+                    "column_type": 7,
+                    "description": ""
+                }
+            ]
+        }
+    ]
+}
