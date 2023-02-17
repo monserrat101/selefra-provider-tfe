@@ -75,44 +75,46 @@ func GetResource_tfe_terraform_version() *selefra_terraform_schema.SelefraTerraf
 		Description:           "",
 		SubTables:             nil,
 		ListResourceParamsFunc: func(ctx context.Context, clientMeta *schema.ClientMeta, taskClient any, task *schema.DataSourcePullTask, resultChannel chan<- any) ([]*selefra_terraform_schema.ResourceRequestParam, *schema.Diagnostics) {
-			client := taskClient.(*Client)
+			//client := taskClient.(*Client)
+			//
+			//resp, err := client.tfeClient.Admin.TerraformVersions.List(ctx, &tfe.AdminTerraformVersionsListOptions{
+			//	ListOptions: tfe.ListOptions{
+			//		PageNumber: 0,
+			//		PageSize:   10,
+			//	},
+			//})
+			//if err != nil {
+			//	return nil, schema.NewDiagnosticsAddErrorMsg(err.Error())
+			//}
+			//count := resp.TotalCount
+			//pages := count/10 + 1
+			//
+			//resourceRequestParamSlice := make([]*selefra_terraform_schema.ResourceRequestParam, 0)
+			//for i := 0; i < pages; i++ {
+			//	resp, err := client.tfeClient.Admin.TerraformVersions.List(ctx, &tfe.AdminTerraformVersionsListOptions{
+			//		ListOptions: tfe.ListOptions{
+			//			PageNumber: i,
+			//			PageSize:   10,
+			//		},
+			//	})
+			//	if err != nil {
+			//		return nil, schema.NewDiagnosticsAddErrorMsg(err.Error())
+			//	}
+			//	for _, item := range resp.Items {
+			//		resourceRequestParamSlice = append(resourceRequestParamSlice, &selefra_terraform_schema.ResourceRequestParam{
+			//			ID: item.ID,
+			//			ArgumentMap: map[string]interface{}{
+			//				"version": item.Version,
+			//				"url":     item.URL,
+			//				"sha":     item.Sha,
+			//			},
+			//		})
+			//	}
+			//}
+			//
+			//return resourceRequestParamSlice, nil
 
-			resp, err := client.tfeClient.Admin.TerraformVersions.List(ctx, &tfe.AdminTerraformVersionsListOptions{
-				ListOptions: tfe.ListOptions{
-					PageNumber: 0,
-					PageSize:   10,
-				},
-			})
-			if err != nil {
-				return nil, schema.NewDiagnosticsAddErrorMsg(err.Error())
-			}
-			count := resp.TotalCount
-			pages := count/10 + 1
-
-			resourceRequestParamSlice := make([]*selefra_terraform_schema.ResourceRequestParam, 0)
-			for i := 0; i < pages; i++ {
-				resp, err := client.tfeClient.Admin.TerraformVersions.List(ctx, &tfe.AdminTerraformVersionsListOptions{
-					ListOptions: tfe.ListOptions{
-						PageNumber: i,
-						PageSize:   10,
-					},
-				})
-				if err != nil {
-					return nil, schema.NewDiagnosticsAddErrorMsg(err.Error())
-				}
-				for _, item := range resp.Items {
-					resourceRequestParamSlice = append(resourceRequestParamSlice, &selefra_terraform_schema.ResourceRequestParam{
-						ID: item.ID,
-						ArgumentMap: map[string]interface{}{
-							"version": item.Version,
-							"url":     item.URL,
-							"sha":     item.Sha,
-						},
-					})
-				}
-			}
-
-			return resourceRequestParamSlice, nil
+			return nil, nil
 		},
 	}
 }
@@ -125,37 +127,39 @@ func GetResource_tfe_admin_organization_settings() *selefra_terraform_schema.Sel
 		Description:           "",
 		SubTables:             nil,
 		ListResourceParamsFunc: func(ctx context.Context, clientMeta *schema.ClientMeta, taskClient any, task *schema.DataSourcePullTask, resultChannel chan<- any) ([]*selefra_terraform_schema.ResourceRequestParam, *schema.Diagnostics) {
-			client := taskClient.(*Client)
+			//client := taskClient.(*Client)
+			//
+			//resp, err := client.tfeClient.Admin.Organizations.List(ctx, &tfe.AdminOrganizationListOptions{
+			//	ListOptions: tfe.ListOptions{
+			//		PageNumber: 0,
+			//		PageSize:   10,
+			//	},
+			//})
+			//if err != nil {
+			//	return nil, schema.NewDiagnosticsAddErrorMsg(err.Error())
+			//}
+			//count := resp.TotalCount
+			//pages := count/10 + 1
+			//
+			//resourceRequestParamSlice := make([]*selefra_terraform_schema.ResourceRequestParam, 0)
+			//for i := 0; i < pages; i++ {
+			//	resp, err := client.tfeClient.Admin.Organizations.List(ctx, &tfe.AdminOrganizationListOptions{
+			//		ListOptions: tfe.ListOptions{
+			//			PageNumber: i,
+			//			PageSize:   10,
+			//		},
+			//	})
+			//	if err != nil {
+			//		continue
+			//	}
+			//	if len(resp.Items) <= 0 {
+			//		break
+			//	}
+			//}
+			//
+			//return resourceRequestParamSlice, nil
 
-			resp, err := client.tfeClient.Admin.Organizations.List(ctx, &tfe.AdminOrganizationListOptions{
-				ListOptions: tfe.ListOptions{
-					PageNumber: 0,
-					PageSize:   10,
-				},
-			})
-			if err != nil {
-				return nil, schema.NewDiagnosticsAddErrorMsg(err.Error())
-			}
-			count := resp.TotalCount
-			pages := count/10 + 1
-
-			resourceRequestParamSlice := make([]*selefra_terraform_schema.ResourceRequestParam, 0)
-			for i := 0; i < pages; i++ {
-				resp, err := client.tfeClient.Admin.Organizations.List(ctx, &tfe.AdminOrganizationListOptions{
-					ListOptions: tfe.ListOptions{
-						PageNumber: i,
-						PageSize:   10,
-					},
-				})
-				if err != nil {
-					continue
-				}
-				if len(resp.Items) <= 0 {
-					break
-				}
-			}
-
-			return resourceRequestParamSlice, nil
+			return nil, nil
 		},
 	}
 }
@@ -168,44 +172,46 @@ func GetResource_tfe_workspace_variable_set() *selefra_terraform_schema.SelefraT
 		Description:           "",
 		SubTables:             nil,
 		ListResourceParamsFunc: func(ctx context.Context, clientMeta *schema.ClientMeta, taskClient any, task *schema.DataSourcePullTask, resultChannel chan<- any) ([]*selefra_terraform_schema.ResourceRequestParam, *schema.Diagnostics) {
-			client := taskClient.(*Client)
+			//client := taskClient.(*Client)
+			//
+			//resp, err := client.tfeClient.VariableSets.ListForWorkspace(ctx, client.WorkspaceId, &tfe.VariableSetListOptions{
+			//	ListOptions: tfe.ListOptions{
+			//		PageNumber: 0,
+			//		PageSize:   10,
+			//	},
+			//})
+			//if err != nil {
+			//	return nil, schema.NewDiagnosticsAddErrorMsg(err.Error())
+			//}
+			//count := resp.TotalCount
+			//pages := count/10 + 1
+			//
+			//resourceRequestParamSlice := make([]*selefra_terraform_schema.ResourceRequestParam, 0)
+			//for i := 0; i < pages; i++ {
+			//	resp, err := client.tfeClient.VariableSets.ListForWorkspace(ctx, client.WorkspaceId, &tfe.VariableSetListOptions{
+			//		ListOptions: tfe.ListOptions{
+			//			PageNumber: i,
+			//			PageSize:   10,
+			//		},
+			//	})
+			//	if err != nil {
+			//		return nil, schema.NewDiagnosticsAddErrorMsg(err.Error())
+			//	}
+			//	for _, item := range resp.Items {
+			//		resourceRequestParamSlice = append(resourceRequestParamSlice, &selefra_terraform_schema.ResourceRequestParam{
+			//			//ID: fmt.Sprintf("%s_%s", client.WorkspaceId, item.ID), // TODO: check
+			//			ID: item.ID,
+			//			ArgumentMap: map[string]interface{}{
+			//				"variable_set_id": item.Name,
+			//				"workspace_id":    client.WorkspaceId,
+			//			},
+			//		})
+			//	}
+			//}
+			//
+			//return resourceRequestParamSlice, nil
 
-			resp, err := client.tfeClient.VariableSets.ListForWorkspace(ctx, client.WorkspaceId, &tfe.VariableSetListOptions{
-				ListOptions: tfe.ListOptions{
-					PageNumber: 0,
-					PageSize:   10,
-				},
-			})
-			if err != nil {
-				return nil, schema.NewDiagnosticsAddErrorMsg(err.Error())
-			}
-			count := resp.TotalCount
-			pages := count/10 + 1
-
-			resourceRequestParamSlice := make([]*selefra_terraform_schema.ResourceRequestParam, 0)
-			for i := 0; i < pages; i++ {
-				resp, err := client.tfeClient.VariableSets.ListForWorkspace(ctx, client.WorkspaceId, &tfe.VariableSetListOptions{
-					ListOptions: tfe.ListOptions{
-						PageNumber: i,
-						PageSize:   10,
-					},
-				})
-				if err != nil {
-					return nil, schema.NewDiagnosticsAddErrorMsg(err.Error())
-				}
-				for _, item := range resp.Items {
-					resourceRequestParamSlice = append(resourceRequestParamSlice, &selefra_terraform_schema.ResourceRequestParam{
-						//ID: fmt.Sprintf("%s_%s", client.WorkspaceId, item.ID), // TODO: check
-						ID: item.ID,
-						ArgumentMap: map[string]interface{}{
-							"variable_set_id": item.Name,
-							"workspace_id":    client.WorkspaceId,
-						},
-					})
-				}
-			}
-
-			return resourceRequestParamSlice, nil
+			return nil, nil
 		},
 	}
 }
@@ -218,25 +224,27 @@ func GetResource_tfe_team_members() *selefra_terraform_schema.SelefraTerraformRe
 		Description:           "",
 		SubTables:             nil,
 		ListResourceParamsFunc: func(ctx context.Context, clientMeta *schema.ClientMeta, taskClient any, task *schema.DataSourcePullTask, resultChannel chan<- any) ([]*selefra_terraform_schema.ResourceRequestParam, *schema.Diagnostics) {
-			client := taskClient.(*Client)
+			//client := taskClient.(*Client)
+			//
+			//resourceRequestParamSlice := make([]*selefra_terraform_schema.ResourceRequestParam, 0)
+			//
+			//members, err := client.tfeClient.TeamMembers.List(ctx, client.TeamId)
+			//if err != nil {
+			//	return nil, schema.NewDiagnosticsAddErrorMsg(err.Error())
+			//}
+			//for _, user := range members {
+			//	resourceRequestParamSlice = append(resourceRequestParamSlice, &selefra_terraform_schema.ResourceRequestParam{
+			//		ID: client.TeamId,
+			//		ArgumentMap: map[string]interface{}{
+			//			"team_id":   client.TeamId,
+			//			"usernames": user.Username,
+			//		},
+			//	})
+			//}
+			//
+			//return resourceRequestParamSlice, nil
 
-			resourceRequestParamSlice := make([]*selefra_terraform_schema.ResourceRequestParam, 0)
-
-			members, err := client.tfeClient.TeamMembers.List(ctx, client.TeamId)
-			if err != nil {
-				return nil, schema.NewDiagnosticsAddErrorMsg(err.Error())
-			}
-			for _, user := range members {
-				resourceRequestParamSlice = append(resourceRequestParamSlice, &selefra_terraform_schema.ResourceRequestParam{
-					ID: client.TeamId,
-					ArgumentMap: map[string]interface{}{
-						"team_id":   client.TeamId,
-						"usernames": user.Username,
-					},
-				})
-			}
-
-			return resourceRequestParamSlice, nil
+			return nil, nil
 		},
 	}
 }
@@ -249,42 +257,44 @@ func GetResource_tfe_team() *selefra_terraform_schema.SelefraTerraformResource {
 		Description:           "",
 		SubTables:             nil,
 		ListResourceParamsFunc: func(ctx context.Context, clientMeta *schema.ClientMeta, taskClient any, task *schema.DataSourcePullTask, resultChannel chan<- any) ([]*selefra_terraform_schema.ResourceRequestParam, *schema.Diagnostics) {
-			client := taskClient.(*Client)
+			//client := taskClient.(*Client)
+			//
+			//resp, err := client.tfeClient.Teams.List(ctx, client.Organization, &tfe.TeamListOptions{
+			//	ListOptions: tfe.ListOptions{
+			//		PageNumber: 0,
+			//		PageSize:   10,
+			//	},
+			//})
+			//if err != nil {
+			//	return nil, schema.NewDiagnosticsAddErrorMsg(err.Error())
+			//}
+			//count := resp.TotalCount
+			//pages := count/10 + 1
+			//
+			//resourceRequestParamSlice := make([]*selefra_terraform_schema.ResourceRequestParam, 0)
+			//for i := 0; i < pages; i++ {
+			//	resp, err := client.tfeClient.Teams.List(ctx, client.Organization, &tfe.TeamListOptions{
+			//		ListOptions: tfe.ListOptions{
+			//			PageNumber: i,
+			//			PageSize:   10,
+			//		},
+			//	})
+			//	if err != nil {
+			//		return nil, schema.NewDiagnosticsAddErrorMsg(err.Error())
+			//	}
+			//	for _, item := range resp.Items {
+			//		resourceRequestParamSlice = append(resourceRequestParamSlice, &selefra_terraform_schema.ResourceRequestParam{
+			//			ID: item.ID,
+			//			ArgumentMap: map[string]interface{}{
+			//				"name": item.Name,
+			//			},
+			//		})
+			//	}
+			//}
+			//
+			//return resourceRequestParamSlice, nil
 
-			resp, err := client.tfeClient.Teams.List(ctx, client.Organization, &tfe.TeamListOptions{
-				ListOptions: tfe.ListOptions{
-					PageNumber: 0,
-					PageSize:   10,
-				},
-			})
-			if err != nil {
-				return nil, schema.NewDiagnosticsAddErrorMsg(err.Error())
-			}
-			count := resp.TotalCount
-			pages := count/10 + 1
-
-			resourceRequestParamSlice := make([]*selefra_terraform_schema.ResourceRequestParam, 0)
-			for i := 0; i < pages; i++ {
-				resp, err := client.tfeClient.Teams.List(ctx, client.Organization, &tfe.TeamListOptions{
-					ListOptions: tfe.ListOptions{
-						PageNumber: i,
-						PageSize:   10,
-					},
-				})
-				if err != nil {
-					return nil, schema.NewDiagnosticsAddErrorMsg(err.Error())
-				}
-				for _, item := range resp.Items {
-					resourceRequestParamSlice = append(resourceRequestParamSlice, &selefra_terraform_schema.ResourceRequestParam{
-						ID: item.ID,
-						ArgumentMap: map[string]interface{}{
-							"name": item.Name,
-						},
-					})
-				}
-			}
-
-			return resourceRequestParamSlice, nil
+			return nil, nil
 		},
 	}
 }
@@ -297,45 +307,47 @@ func GetResource_tfe_team_access() *selefra_terraform_schema.SelefraTerraformRes
 		Description:           "",
 		SubTables:             nil,
 		ListResourceParamsFunc: func(ctx context.Context, clientMeta *schema.ClientMeta, taskClient any, task *schema.DataSourcePullTask, resultChannel chan<- any) ([]*selefra_terraform_schema.ResourceRequestParam, *schema.Diagnostics) {
-			client := taskClient.(*Client)
+			//client := taskClient.(*Client)
+			//
+			//resp, err := client.tfeClient.TeamAccess.List(ctx, &tfe.TeamAccessListOptions{
+			//	ListOptions: tfe.ListOptions{
+			//		PageNumber: 0,
+			//		PageSize:   10,
+			//	},
+			//	WorkspaceID: client.WorkspaceId,
+			//})
+			//if err != nil {
+			//	return nil, schema.NewDiagnosticsAddErrorMsg(err.Error())
+			//}
+			//count := resp.TotalCount
+			//pages := count/10 + 1
+			//
+			//resourceRequestParamSlice := make([]*selefra_terraform_schema.ResourceRequestParam, 0)
+			//for i := 0; i < pages; i++ {
+			//	resp, err := client.tfeClient.TeamAccess.List(ctx, &tfe.TeamAccessListOptions{
+			//		ListOptions: tfe.ListOptions{
+			//			PageNumber: i,
+			//			PageSize:   10,
+			//		},
+			//		WorkspaceID: client.WorkspaceId,
+			//	})
+			//	if err != nil {
+			//		return nil, schema.NewDiagnosticsAddErrorMsg(err.Error())
+			//	}
+			//	for _, item := range resp.Items {
+			//		resourceRequestParamSlice = append(resourceRequestParamSlice, &selefra_terraform_schema.ResourceRequestParam{
+			//			ID: fmt.Sprintf("%s/%s/%s", client.Organization, client.WorkspaceId, item.ID),
+			//			ArgumentMap: map[string]interface{}{
+			//				"team_id":      item.Team.ID,
+			//				"workspace_id": item.Workspace.ID,
+			//			},
+			//		})
+			//	}
+			//}
+			//
+			//return resourceRequestParamSlice, nil
 
-			resp, err := client.tfeClient.TeamAccess.List(ctx, &tfe.TeamAccessListOptions{
-				ListOptions: tfe.ListOptions{
-					PageNumber: 0,
-					PageSize:   10,
-				},
-				WorkspaceID: client.WorkspaceId,
-			})
-			if err != nil {
-				return nil, schema.NewDiagnosticsAddErrorMsg(err.Error())
-			}
-			count := resp.TotalCount
-			pages := count/10 + 1
-
-			resourceRequestParamSlice := make([]*selefra_terraform_schema.ResourceRequestParam, 0)
-			for i := 0; i < pages; i++ {
-				resp, err := client.tfeClient.TeamAccess.List(ctx, &tfe.TeamAccessListOptions{
-					ListOptions: tfe.ListOptions{
-						PageNumber: i,
-						PageSize:   10,
-					},
-					WorkspaceID: client.WorkspaceId,
-				})
-				if err != nil {
-					return nil, schema.NewDiagnosticsAddErrorMsg(err.Error())
-				}
-				for _, item := range resp.Items {
-					resourceRequestParamSlice = append(resourceRequestParamSlice, &selefra_terraform_schema.ResourceRequestParam{
-						ID: fmt.Sprintf("%s/%s/%s", client.Organization, client.WorkspaceId, item.ID),
-						ArgumentMap: map[string]interface{}{
-							"team_id":      item.Team.ID,
-							"workspace_id": item.Workspace.ID,
-						},
-					})
-				}
-			}
-
-			return resourceRequestParamSlice, nil
+			return nil, nil
 		},
 	}
 }
@@ -362,40 +374,42 @@ func GetResource_tfe_registry_module() *selefra_terraform_schema.SelefraTerrafor
 		Description:           "",
 		SubTables:             nil,
 		ListResourceParamsFunc: func(ctx context.Context, clientMeta *schema.ClientMeta, taskClient any, task *schema.DataSourcePullTask, resultChannel chan<- any) ([]*selefra_terraform_schema.ResourceRequestParam, *schema.Diagnostics) {
-			client := taskClient.(*Client)
+			//client := taskClient.(*Client)
+			//
+			//resp, err := client.tfeClient.RegistryModules.List(ctx, client.Organization, &tfe.RegistryModuleListOptions{
+			//	ListOptions: tfe.ListOptions{
+			//		PageNumber: 0,
+			//		PageSize:   10,
+			//	},
+			//})
+			//if err != nil {
+			//	return nil, schema.NewDiagnosticsAddErrorMsg(err.Error())
+			//}
+			//count := resp.TotalCount
+			//pages := count/10 + 1
+			//
+			//resourceRequestParamSlice := make([]*selefra_terraform_schema.ResourceRequestParam, 0)
+			//for i := 0; i < pages; i++ {
+			//	resp, err := client.tfeClient.RegistryModules.List(ctx, client.Organization, &tfe.RegistryModuleListOptions{
+			//		ListOptions: tfe.ListOptions{
+			//			PageNumber: i,
+			//			PageSize:   10,
+			//		},
+			//	})
+			//	if err != nil {
+			//		return nil, schema.NewDiagnosticsAddErrorMsg(err.Error())
+			//	}
+			//	for _, item := range resp.Items {
+			//		resourceRequestParamSlice = append(resourceRequestParamSlice, &selefra_terraform_schema.ResourceRequestParam{
+			//			ID:          fmt.Sprintf("%s/%s/%s/%s/%s/%s", client.Organization, item.Name, item.Namespace, item.Name, item.Provider, item.ID),
+			//			ArgumentMap: map[string]interface{}{},
+			//		})
+			//	}
+			//}
+			//
+			//return resourceRequestParamSlice, nil
 
-			resp, err := client.tfeClient.RegistryModules.List(ctx, client.Organization, &tfe.RegistryModuleListOptions{
-				ListOptions: tfe.ListOptions{
-					PageNumber: 0,
-					PageSize:   10,
-				},
-			})
-			if err != nil {
-				return nil, schema.NewDiagnosticsAddErrorMsg(err.Error())
-			}
-			count := resp.TotalCount
-			pages := count/10 + 1
-
-			resourceRequestParamSlice := make([]*selefra_terraform_schema.ResourceRequestParam, 0)
-			for i := 0; i < pages; i++ {
-				resp, err := client.tfeClient.RegistryModules.List(ctx, client.Organization, &tfe.RegistryModuleListOptions{
-					ListOptions: tfe.ListOptions{
-						PageNumber: i,
-						PageSize:   10,
-					},
-				})
-				if err != nil {
-					return nil, schema.NewDiagnosticsAddErrorMsg(err.Error())
-				}
-				for _, item := range resp.Items {
-					resourceRequestParamSlice = append(resourceRequestParamSlice, &selefra_terraform_schema.ResourceRequestParam{
-						ID:          fmt.Sprintf("%s/%s/%s/%s/%s/%s", client.Organization, item.Name, item.Namespace, item.Name, item.Provider, item.ID),
-						ArgumentMap: map[string]interface{}{},
-					})
-				}
-			}
-
-			return resourceRequestParamSlice, nil
+			return nil, nil
 		},
 	}
 }
@@ -519,43 +533,45 @@ func GetResource_tfe_ssh_key() *selefra_terraform_schema.SelefraTerraformResourc
 		Description:           "",
 		SubTables:             nil,
 		ListResourceParamsFunc: func(ctx context.Context, clientMeta *schema.ClientMeta, taskClient any, task *schema.DataSourcePullTask, resultChannel chan<- any) ([]*selefra_terraform_schema.ResourceRequestParam, *schema.Diagnostics) {
-			client := taskClient.(*Client)
+			//client := taskClient.(*Client)
+			//
+			//// TODO: no data fetched
+			//resp, err := client.tfeClient.SSHKeys.List(ctx, client.Organization, &tfe.SSHKeyListOptions{
+			//	ListOptions: tfe.ListOptions{
+			//		PageNumber: 0,
+			//		PageSize:   10,
+			//	},
+			//})
+			//if err != nil {
+			//	return nil, schema.NewDiagnosticsAddErrorMsg(err.Error())
+			//}
+			//count := resp.TotalCount
+			//pages := count/10 + 1
+			//
+			//resourceRequestParamSlice := make([]*selefra_terraform_schema.ResourceRequestParam, 0)
+			//for i := 0; i < pages; i++ {
+			//	resp, err := client.tfeClient.SSHKeys.List(ctx, client.Organization, &tfe.SSHKeyListOptions{
+			//		ListOptions: tfe.ListOptions{
+			//			PageNumber: i,
+			//			PageSize:   10,
+			//		},
+			//	})
+			//	if err != nil {
+			//		return nil, schema.NewDiagnosticsAddErrorMsg(err.Error())
+			//	}
+			//	for _, item := range resp.Items {
+			//		resourceRequestParamSlice = append(resourceRequestParamSlice, &selefra_terraform_schema.ResourceRequestParam{
+			//			ID: item.ID,
+			//			ArgumentMap: map[string]interface{}{
+			//				"name": item.Name,
+			//			},
+			//		})
+			//	}
+			//}
+			//
+			//return resourceRequestParamSlice, nil
 
-			// TODO: no data fetched
-			resp, err := client.tfeClient.SSHKeys.List(ctx, client.Organization, &tfe.SSHKeyListOptions{
-				ListOptions: tfe.ListOptions{
-					PageNumber: 0,
-					PageSize:   10,
-				},
-			})
-			if err != nil {
-				return nil, schema.NewDiagnosticsAddErrorMsg(err.Error())
-			}
-			count := resp.TotalCount
-			pages := count/10 + 1
-
-			resourceRequestParamSlice := make([]*selefra_terraform_schema.ResourceRequestParam, 0)
-			for i := 0; i < pages; i++ {
-				resp, err := client.tfeClient.SSHKeys.List(ctx, client.Organization, &tfe.SSHKeyListOptions{
-					ListOptions: tfe.ListOptions{
-						PageNumber: i,
-						PageSize:   10,
-					},
-				})
-				if err != nil {
-					return nil, schema.NewDiagnosticsAddErrorMsg(err.Error())
-				}
-				for _, item := range resp.Items {
-					resourceRequestParamSlice = append(resourceRequestParamSlice, &selefra_terraform_schema.ResourceRequestParam{
-						ID: item.ID,
-						ArgumentMap: map[string]interface{}{
-							"name": item.Name,
-						},
-					})
-				}
-			}
-
-			return resourceRequestParamSlice, nil
+			return nil, nil
 		},
 	}
 }
@@ -616,42 +632,44 @@ func GetResource_tfe_organization_run_task() *selefra_terraform_schema.SelefraTe
 		Description:           "",
 		SubTables:             nil,
 		ListResourceParamsFunc: func(ctx context.Context, clientMeta *schema.ClientMeta, taskClient any, task *schema.DataSourcePullTask, resultChannel chan<- any) ([]*selefra_terraform_schema.ResourceRequestParam, *schema.Diagnostics) {
-			client := taskClient.(*Client)
+			//client := taskClient.(*Client)
+			//
+			//resp, err := client.tfeClient.RunTasks.List(ctx, client.Organization, &tfe.RunTaskListOptions{
+			//	ListOptions: tfe.ListOptions{
+			//		PageNumber: 0,
+			//		PageSize:   10,
+			//	},
+			//})
+			//if err != nil {
+			//	return nil, schema.NewDiagnosticsAddErrorMsg(err.Error())
+			//}
+			//count := resp.TotalCount
+			//pages := count/10 + 1
+			//
+			//resourceRequestParamSlice := make([]*selefra_terraform_schema.ResourceRequestParam, 0)
+			//for i := 0; i < pages; i++ {
+			//	resp, err := client.tfeClient.RunTasks.List(ctx, client.Organization, &tfe.RunTaskListOptions{
+			//		ListOptions: tfe.ListOptions{
+			//			PageNumber: i,
+			//			PageSize:   10,
+			//		},
+			//	})
+			//	if err != nil {
+			//		return nil, schema.NewDiagnosticsAddErrorMsg(err.Error())
+			//	}
+			//	for _, item := range resp.Items {
+			//		resourceRequestParamSlice = append(resourceRequestParamSlice, &selefra_terraform_schema.ResourceRequestParam{
+			//			ID: item.ID,
+			//			ArgumentMap: map[string]interface{}{
+			//				"url": item.URL,
+			//			},
+			//		})
+			//	}
+			//}
+			//
+			//return resourceRequestParamSlice, nil
 
-			resp, err := client.tfeClient.RunTasks.List(ctx, client.Organization, &tfe.RunTaskListOptions{
-				ListOptions: tfe.ListOptions{
-					PageNumber: 0,
-					PageSize:   10,
-				},
-			})
-			if err != nil {
-				return nil, schema.NewDiagnosticsAddErrorMsg(err.Error())
-			}
-			count := resp.TotalCount
-			pages := count/10 + 1
-
-			resourceRequestParamSlice := make([]*selefra_terraform_schema.ResourceRequestParam, 0)
-			for i := 0; i < pages; i++ {
-				resp, err := client.tfeClient.RunTasks.List(ctx, client.Organization, &tfe.RunTaskListOptions{
-					ListOptions: tfe.ListOptions{
-						PageNumber: i,
-						PageSize:   10,
-					},
-				})
-				if err != nil {
-					return nil, schema.NewDiagnosticsAddErrorMsg(err.Error())
-				}
-				for _, item := range resp.Items {
-					resourceRequestParamSlice = append(resourceRequestParamSlice, &selefra_terraform_schema.ResourceRequestParam{
-						ID: item.ID,
-						ArgumentMap: map[string]interface{}{
-							"url": item.URL,
-						},
-					})
-				}
-			}
-
-			return resourceRequestParamSlice, nil
+			return nil, nil
 		},
 	}
 }
@@ -664,42 +682,44 @@ func GetResource_tfe_agent_pool() *selefra_terraform_schema.SelefraTerraformReso
 		Description:           "",
 		SubTables:             nil,
 		ListResourceParamsFunc: func(ctx context.Context, clientMeta *schema.ClientMeta, taskClient any, task *schema.DataSourcePullTask, resultChannel chan<- any) ([]*selefra_terraform_schema.ResourceRequestParam, *schema.Diagnostics) {
-			client := taskClient.(*Client)
+			//client := taskClient.(*Client)
+			//
+			//resp, err := client.tfeClient.AgentPools.List(ctx, client.Organization, &tfe.AgentPoolListOptions{
+			//	ListOptions: tfe.ListOptions{
+			//		PageNumber: 0,
+			//		PageSize:   10,
+			//	},
+			//})
+			//if err != nil {
+			//	return nil, schema.NewDiagnosticsAddErrorMsg(err.Error())
+			//}
+			//count := resp.TotalCount
+			//pages := count/10 + 1
+			//
+			//resourceRequestParamSlice := make([]*selefra_terraform_schema.ResourceRequestParam, 0)
+			//for i := 0; i < pages; i++ {
+			//	resp, err := client.tfeClient.AgentPools.List(ctx, client.Organization, &tfe.AgentPoolListOptions{
+			//		ListOptions: tfe.ListOptions{
+			//			PageNumber: i,
+			//			PageSize:   10,
+			//		},
+			//	})
+			//	if err != nil {
+			//		return nil, schema.NewDiagnosticsAddErrorMsg(err.Error())
+			//	}
+			//	for _, item := range resp.Items {
+			//		resourceRequestParamSlice = append(resourceRequestParamSlice, &selefra_terraform_schema.ResourceRequestParam{
+			//			ID: item.ID,
+			//			ArgumentMap: map[string]interface{}{
+			//				"name": item.Name,
+			//			},
+			//		})
+			//	}
+			//}
+			//
+			//return resourceRequestParamSlice, nil
 
-			resp, err := client.tfeClient.AgentPools.List(ctx, client.Organization, &tfe.AgentPoolListOptions{
-				ListOptions: tfe.ListOptions{
-					PageNumber: 0,
-					PageSize:   10,
-				},
-			})
-			if err != nil {
-				return nil, schema.NewDiagnosticsAddErrorMsg(err.Error())
-			}
-			count := resp.TotalCount
-			pages := count/10 + 1
-
-			resourceRequestParamSlice := make([]*selefra_terraform_schema.ResourceRequestParam, 0)
-			for i := 0; i < pages; i++ {
-				resp, err := client.tfeClient.AgentPools.List(ctx, client.Organization, &tfe.AgentPoolListOptions{
-					ListOptions: tfe.ListOptions{
-						PageNumber: i,
-						PageSize:   10,
-					},
-				})
-				if err != nil {
-					return nil, schema.NewDiagnosticsAddErrorMsg(err.Error())
-				}
-				for _, item := range resp.Items {
-					resourceRequestParamSlice = append(resourceRequestParamSlice, &selefra_terraform_schema.ResourceRequestParam{
-						ID: item.ID,
-						ArgumentMap: map[string]interface{}{
-							"name": item.Name,
-						},
-					})
-				}
-			}
-
-			return resourceRequestParamSlice, nil
+			return nil, nil
 		},
 	}
 }
@@ -766,48 +786,50 @@ func GetResource_tfe_workspace() *selefra_terraform_schema.SelefraTerraformResou
 		Description:           "",
 		SubTables:             nil,
 		ListResourceParamsFunc: func(ctx context.Context, clientMeta *schema.ClientMeta, taskClient any, task *schema.DataSourcePullTask, resultChannel chan<- any) ([]*selefra_terraform_schema.ResourceRequestParam, *schema.Diagnostics) {
-			client := taskClient.(*Client)
+			//client := taskClient.(*Client)
+			//
+			//resp, err := client.tfeClient.Workspaces.List(ctx, client.Organization, &tfe.WorkspaceListOptions{
+			//	ListOptions: tfe.ListOptions{
+			//		PageNumber: 0,
+			//		PageSize:   10,
+			//	},
+			//	Include: []tfe.WSIncludeOpt{
+			//		tfe.WSOrganization,
+			//	},
+			//})
+			//if err != nil {
+			//	return nil, schema.NewDiagnosticsAddErrorMsg(err.Error())
+			//}
+			//count := resp.TotalCount
+			//pages := count/10 + 1
+			//
+			//resourceRequestParamSlice := make([]*selefra_terraform_schema.ResourceRequestParam, 0)
+			//for i := 0; i < pages; i++ {
+			//	resp, err := client.tfeClient.Workspaces.List(ctx, client.Organization, &tfe.WorkspaceListOptions{
+			//		ListOptions: tfe.ListOptions{
+			//			PageNumber: i,
+			//			PageSize:   10,
+			//		},
+			//		Include: []tfe.WSIncludeOpt{
+			//			tfe.WSOrganization,
+			//		},
+			//	})
+			//	if err != nil {
+			//		return nil, schema.NewDiagnosticsAddErrorMsg(err.Error())
+			//	}
+			//	for _, item := range resp.Items {
+			//		resourceRequestParamSlice = append(resourceRequestParamSlice, &selefra_terraform_schema.ResourceRequestParam{
+			//			ID: item.ID,
+			//			ArgumentMap: map[string]interface{}{
+			//				"name": item.Name,
+			//			},
+			//		})
+			//	}
+			//}
+			//
+			//return resourceRequestParamSlice, nil
 
-			resp, err := client.tfeClient.Workspaces.List(ctx, client.Organization, &tfe.WorkspaceListOptions{
-				ListOptions: tfe.ListOptions{
-					PageNumber: 0,
-					PageSize:   10,
-				},
-				Include: []tfe.WSIncludeOpt{
-					tfe.WSOrganization,
-				},
-			})
-			if err != nil {
-				return nil, schema.NewDiagnosticsAddErrorMsg(err.Error())
-			}
-			count := resp.TotalCount
-			pages := count/10 + 1
-
-			resourceRequestParamSlice := make([]*selefra_terraform_schema.ResourceRequestParam, 0)
-			for i := 0; i < pages; i++ {
-				resp, err := client.tfeClient.Workspaces.List(ctx, client.Organization, &tfe.WorkspaceListOptions{
-					ListOptions: tfe.ListOptions{
-						PageNumber: i,
-						PageSize:   10,
-					},
-					Include: []tfe.WSIncludeOpt{
-						tfe.WSOrganization,
-					},
-				})
-				if err != nil {
-					return nil, schema.NewDiagnosticsAddErrorMsg(err.Error())
-				}
-				for _, item := range resp.Items {
-					resourceRequestParamSlice = append(resourceRequestParamSlice, &selefra_terraform_schema.ResourceRequestParam{
-						ID: item.ID,
-						ArgumentMap: map[string]interface{}{
-							"name": item.Name,
-						},
-					})
-				}
-			}
-
-			return resourceRequestParamSlice, nil
+			return nil, nil
 		},
 	}
 }
@@ -1065,44 +1087,46 @@ func GetResource_tfe_variable() *selefra_terraform_schema.SelefraTerraformResour
 		Description:           "",
 		SubTables:             nil,
 		ListResourceParamsFunc: func(ctx context.Context, clientMeta *schema.ClientMeta, taskClient any, task *schema.DataSourcePullTask, resultChannel chan<- any) ([]*selefra_terraform_schema.ResourceRequestParam, *schema.Diagnostics) {
-			client := taskClient.(*Client)
+			//client := taskClient.(*Client)
+			//
+			//resp, err := client.tfeClient.Variables.List(ctx, client.WorkspaceId, &tfe.VariableListOptions{
+			//	ListOptions: tfe.ListOptions{
+			//		PageNumber: 0,
+			//		PageSize:   10,
+			//	},
+			//})
+			//if err != nil {
+			//	return nil, schema.NewDiagnosticsAddErrorMsg(err.Error())
+			//}
+			//count := resp.TotalCount
+			//pages := count/10 + 1
+			//
+			//resourceRequestParamSlice := make([]*selefra_terraform_schema.ResourceRequestParam, 0)
+			//for i := 0; i < pages; i++ {
+			//	resp, err := client.tfeClient.Variables.List(ctx, client.WorkspaceId, &tfe.VariableListOptions{
+			//		ListOptions: tfe.ListOptions{
+			//			PageNumber: i,
+			//			PageSize:   10,
+			//		},
+			//	})
+			//	if err != nil {
+			//		return nil, schema.NewDiagnosticsAddErrorMsg(err.Error())
+			//	}
+			//	for _, item := range resp.Items {
+			//		resourceRequestParamSlice = append(resourceRequestParamSlice, &selefra_terraform_schema.ResourceRequestParam{
+			//			ID: item.ID,
+			//			ArgumentMap: map[string]interface{}{
+			//				"key":      item.Key,
+			//				"value":    item.Value,
+			//				"category": item.Category,
+			//			},
+			//		})
+			//	}
+			//}
+			//
+			//return resourceRequestParamSlice, nil
 
-			resp, err := client.tfeClient.Variables.List(ctx, client.WorkspaceId, &tfe.VariableListOptions{
-				ListOptions: tfe.ListOptions{
-					PageNumber: 0,
-					PageSize:   10,
-				},
-			})
-			if err != nil {
-				return nil, schema.NewDiagnosticsAddErrorMsg(err.Error())
-			}
-			count := resp.TotalCount
-			pages := count/10 + 1
-
-			resourceRequestParamSlice := make([]*selefra_terraform_schema.ResourceRequestParam, 0)
-			for i := 0; i < pages; i++ {
-				resp, err := client.tfeClient.Variables.List(ctx, client.WorkspaceId, &tfe.VariableListOptions{
-					ListOptions: tfe.ListOptions{
-						PageNumber: i,
-						PageSize:   10,
-					},
-				})
-				if err != nil {
-					return nil, schema.NewDiagnosticsAddErrorMsg(err.Error())
-				}
-				for _, item := range resp.Items {
-					resourceRequestParamSlice = append(resourceRequestParamSlice, &selefra_terraform_schema.ResourceRequestParam{
-						ID: item.ID,
-						ArgumentMap: map[string]interface{}{
-							"key":      item.Key,
-							"value":    item.Value,
-							"category": item.Category,
-						},
-					})
-				}
-			}
-
-			return resourceRequestParamSlice, nil
+			return nil, nil
 		},
 	}
 }
@@ -1212,45 +1236,47 @@ func GetResource_tfe_workspace_run_task() *selefra_terraform_schema.SelefraTerra
 		Description:           "",
 		SubTables:             nil,
 		ListResourceParamsFunc: func(ctx context.Context, clientMeta *schema.ClientMeta, taskClient any, task *schema.DataSourcePullTask, resultChannel chan<- any) ([]*selefra_terraform_schema.ResourceRequestParam, *schema.Diagnostics) {
-			client := taskClient.(*Client)
+			//client := taskClient.(*Client)
+			//
+			//resp, err := client.tfeClient.WorkspaceRunTasks.List(ctx, client.WorkspaceId, &tfe.WorkspaceRunTaskListOptions{
+			//	ListOptions: tfe.ListOptions{
+			//		PageNumber: 0,
+			//		PageSize:   10,
+			//	},
+			//})
+			//if err != nil {
+			//	return nil, schema.NewDiagnosticsAddErrorMsg(err.Error())
+			//}
+			//count := resp.TotalCount
+			//pages := count/10 + 1
+			//
+			//resourceRequestParamSlice := make([]*selefra_terraform_schema.ResourceRequestParam, 0)
+			//for i := 0; i < pages; i++ {
+			//	resp, err := client.tfeClient.WorkspaceRunTasks.List(ctx, client.WorkspaceId, &tfe.WorkspaceRunTaskListOptions{
+			//		ListOptions: tfe.ListOptions{
+			//			PageNumber: i,
+			//			PageSize:   10,
+			//		},
+			//	})
+			//	if err != nil {
+			//		return nil, schema.NewDiagnosticsAddErrorMsg(err.Error())
+			//	}
+			//	for _, item := range resp.Items {
+			//		resourceRequestParamSlice = append(resourceRequestParamSlice, &selefra_terraform_schema.ResourceRequestParam{
+			//			ID: item.ID,
+			//			ArgumentMap: map[string]interface{}{
+			//				"enforcement_level": item.EnforcementLevel,
+			//				"task_id":           item.RunTask.ID,
+			//				"workspace_id":      item.Workspace.ID,
+			//			},
+			//		})
+			//	}
+			//	i++
+			//}
+			//
+			//return resourceRequestParamSlice, nil
 
-			resp, err := client.tfeClient.WorkspaceRunTasks.List(ctx, client.WorkspaceId, &tfe.WorkspaceRunTaskListOptions{
-				ListOptions: tfe.ListOptions{
-					PageNumber: 0,
-					PageSize:   10,
-				},
-			})
-			if err != nil {
-				return nil, schema.NewDiagnosticsAddErrorMsg(err.Error())
-			}
-			count := resp.TotalCount
-			pages := count/10 + 1
-
-			resourceRequestParamSlice := make([]*selefra_terraform_schema.ResourceRequestParam, 0)
-			for i := 0; i < pages; i++ {
-				resp, err := client.tfeClient.WorkspaceRunTasks.List(ctx, client.WorkspaceId, &tfe.WorkspaceRunTaskListOptions{
-					ListOptions: tfe.ListOptions{
-						PageNumber: i,
-						PageSize:   10,
-					},
-				})
-				if err != nil {
-					return nil, schema.NewDiagnosticsAddErrorMsg(err.Error())
-				}
-				for _, item := range resp.Items {
-					resourceRequestParamSlice = append(resourceRequestParamSlice, &selefra_terraform_schema.ResourceRequestParam{
-						ID: item.ID,
-						ArgumentMap: map[string]interface{}{
-							"enforcement_level": item.EnforcementLevel,
-							"task_id":           item.RunTask.ID,
-							"workspace_id":      item.Workspace.ID,
-						},
-					})
-				}
-				i++
-			}
-
-			return resourceRequestParamSlice, nil
+			return nil, nil
 		},
 	}
 }
@@ -1263,25 +1289,27 @@ func GetResource_tfe_agent_token() *selefra_terraform_schema.SelefraTerraformRes
 		Description:           "",
 		SubTables:             nil,
 		ListResourceParamsFunc: func(ctx context.Context, clientMeta *schema.ClientMeta, taskClient any, task *schema.DataSourcePullTask, resultChannel chan<- any) ([]*selefra_terraform_schema.ResourceRequestParam, *schema.Diagnostics) {
-			client := taskClient.(*Client)
+			//client := taskClient.(*Client)
+			//
+			//resourceRequestParamSlice := make([]*selefra_terraform_schema.ResourceRequestParam, 0)
+			//
+			//resp, err := client.tfeClient.AgentTokens.List(ctx, client.AgentPoolId)
+			//if err != nil {
+			//	return nil, schema.NewDiagnosticsAddErrorMsg(err.Error())
+			//}
+			//for _, item := range resp.Items {
+			//	resourceRequestParamSlice = append(resourceRequestParamSlice, &selefra_terraform_schema.ResourceRequestParam{
+			//		ID: item.ID,
+			//		ArgumentMap: map[string]interface{}{
+			//			"agent_pool_id": item.ID,
+			//			"description":   item.Description,
+			//		},
+			//	})
+			//}
+			//
+			//return resourceRequestParamSlice, nil
 
-			resourceRequestParamSlice := make([]*selefra_terraform_schema.ResourceRequestParam, 0)
-
-			resp, err := client.tfeClient.AgentTokens.List(ctx, client.AgentPoolId)
-			if err != nil {
-				return nil, schema.NewDiagnosticsAddErrorMsg(err.Error())
-			}
-			for _, item := range resp.Items {
-				resourceRequestParamSlice = append(resourceRequestParamSlice, &selefra_terraform_schema.ResourceRequestParam{
-					ID: item.ID,
-					ArgumentMap: map[string]interface{}{
-						"agent_pool_id": item.ID,
-						"description":   item.Description,
-					},
-				})
-			}
-
-			return resourceRequestParamSlice, nil
+			return nil, nil
 		},
 	}
 }
@@ -1337,7 +1365,7 @@ func GetResource_tfe_policy_set_parameter() *selefra_terraform_schema.SelefraTer
 	}
 }
 
-// terraform resource: tfe_team_project_access. S???
+// terraform resource: tfe_team_project_access. S
 func GetResource_tfe_team_project_access() *selefra_terraform_schema.SelefraTerraformResource {
 	return &selefra_terraform_schema.SelefraTerraformResource{
 		SelefraTableName:      "tfe_team_project_access",

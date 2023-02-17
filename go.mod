@@ -1,4 +1,4 @@
-module github.com/CrestLee/selefra-terraform-provider-tfe
+module github.com/selefra/selefra-provider-tfe
 
 go 1.19
 

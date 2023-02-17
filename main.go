@@ -4,7 +4,7 @@ package main
 
 import (
 	"github.com/selefra/selefra-provider-sdk/grpc/serve"
-	"github.com/CrestLee/selefra-terraform-provider-tfe/resources"
+	"github.com/selefra/selefra-provider-tfe/resources"
 )
 
 func main() {
