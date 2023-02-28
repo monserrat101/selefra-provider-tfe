@@ -12,21 +12,21 @@ import (
 )
 
 type Config struct {
-	WorkspaceId  string `yaml:"workspace_id" json:"workspace_id" mapstructure:"workspace_id"`
-	TeamId       string `yaml:"team_id" json:"team_id" mapstructure:"team_id"`
-	Organization string `yaml:"organization" json:"organization" mapstructure:"organization"`
-	AgentPoolId  string `yaml:"agent_pool_id" json:"agent_pool_id" mapstructure:"agent_pool_id"`
-	PolicySetId  string `yaml:"policy_set_id" json:"policy_set_id" mapstructure:"policy_set_id"`
-	Token        string `yaml:"token" json:"token" mapstructure:"token"`
-	ProjectId    string `yaml:"project_id" json:"project_id" mapstructure:"project_id"`
+	WorkspaceId	string	`yaml:"workspace_id" json:"workspace_id" mapstructure:"workspace_id"`
+	TeamId		string	`yaml:"team_id" json:"team_id" mapstructure:"team_id"`
+	Organization	string	`yaml:"organization" json:"organization" mapstructure:"organization"`
+	AgentPoolId	string	`yaml:"agent_pool_id" json:"agent_pool_id" mapstructure:"agent_pool_id"`
+	PolicySetId	string	`yaml:"policy_set_id" json:"policy_set_id" mapstructure:"policy_set_id"`
+	Token		string	`yaml:"token" json:"token" mapstructure:"token"`
+	ProjectId	string	`yaml:"project_id" json:"project_id" mapstructure:"project_id"`
 }
 
 type Client struct {
-	TerraformBridge *bridge.TerraformBridge
+	TerraformBridge	*bridge.TerraformBridge
 
 	*Config
 
-	tfeClient *tfe.Client
+	tfeClient	*tfe.Client
 }
 
 func newClient(conf *Config) (*Client, error) {
@@ -50,8 +50,8 @@ func newClient(conf *Config) (*Client, error) {
 	}
 
 	return &Client{
-		tfeClient: tfeClient,
-		Config:    conf,
+		tfeClient:	tfeClient,
+		Config:		conf,
 	}, nil
 }
 
