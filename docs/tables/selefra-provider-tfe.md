@@ -1,4 +1,4 @@
-# Provider: selefra-provider-tfe
+# Provider: tfe
 
 ## Latest Version 
 
