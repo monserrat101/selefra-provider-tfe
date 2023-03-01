@@ -2,6 +2,7 @@ package provider
 
 import (
 	"context"
+	"github.com/hashicorp/go-tfe"
 
 	"github.com/selefra/selefra-provider-sdk/terraform/bridge"
 	terraform_providers "github.com/selefra/selefra-provider-sdk/terraform/provider"
@@ -16,7 +17,7 @@ const Version = "v0.0.1"
 
 func GetSelefraTerraformProvider() *selefra_terraform_schema.SelefraTerraformProvider {
 	return &selefra_terraform_schema.SelefraTerraformProvider{
-		Name:         "selefra-provider-tfe",
+		Name:         "tfe",
 		Version:      Version,
 		ResourceList: getResources(),
 		ClientMeta: schema.ClientMeta{
@@ -65,11 +66,35 @@ func GetSelefraTerraformProvider() *selefra_terraform_schema.SelefraTerraformPro
 		},
 		ConfigMeta: provider.ConfigMeta{
 			GetDefaultConfigTemplate: func(ctx context.Context) string {
-				// TODO
-				return ``
+				return `token: <your_token>
+workspace_id: example_workspace
+team_id: your_team
+organization: your_org
+agent_pool_id: pool1
+policy_set_id: set1
+project_id: prj1`
 			},
 			Validation: func(ctx context.Context, config *viper.Viper) *schema.Diagnostics {
-				// TODO
+				var conf *Config
+				if err := config.Unmarshal(&conf); err != nil {
+					return schema.NewDiagnostics().AddErrorMsg("analysis config err: %s", err.Error())
+				}
+
+				client, err := newClient(conf)
+				if err != nil {
+					return schema.NewDiagnostics().AddError(err)
+				}
+
+				_, err = client.tfeClient.NotificationConfigurations.List(ctx, client.WorkspaceId, &tfe.NotificationConfigurationListOptions{
+					ListOptions: tfe.ListOptions{
+						PageNumber: 0,
+						PageSize:   10,
+					},
+				})
+				if err != nil {
+					return schema.NewDiagnostics().AddErrorMsg("Got an error while fetch resource: %s\n\tThere may some error in your config, please check it.", err.Error())
+				}
+
 				return nil
 			},
 		},

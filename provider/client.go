@@ -58,7 +58,6 @@ func newClient(conf *Config) (*Client, error) {
 func getToken() (string, error) {
 	var token string
 	token = os.Getenv("TFE_TOKEN")
-	fmt.Printf("----> %s\n", token)
 	if token == "" {
 		homedir, err := os.UserHomeDir()
 		if err != nil {
