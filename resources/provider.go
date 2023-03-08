@@ -67,12 +67,12 @@ func GetSelefraTerraformProvider() *selefra_terraform_schema.SelefraTerraformPro
 		ConfigMeta: provider.ConfigMeta{
 			GetDefaultConfigTemplate: func(ctx context.Context) string {
 				return `token: <your_token>
-workspace_id: example_workspace
-team_id: your_team
-organization: your_org
-agent_pool_id: pool1
-policy_set_id: set1
-project_id: prj1`
+# workspace_id: example_workspace
+# team_id: your_team
+# organization: your_org
+# agent_pool_id: pool1
+# policy_set_id: set1
+# project_id: prj1`
 			},
 			Validation: func(ctx context.Context, config *viper.Viper) *schema.Diagnostics {
 				var conf *Config
