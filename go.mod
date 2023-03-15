@@ -4,7 +4,7 @@ go 1.19
 
 require (
 	github.com/hashicorp/go-tfe v1.18.0
-	github.com/selefra/selefra-provider-sdk v0.0.19
+	github.com/selefra/selefra-provider-sdk v0.0.21
 	github.com/spf13/viper v1.14.0
 )
 
